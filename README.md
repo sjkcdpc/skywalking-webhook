@@ -3,7 +3,7 @@
 Skywalking通过配置webhook来定制化实现钉钉、企微、邮件告警
 
 # 安装
-```
+``` shell scripts
 git clone https://github.com/sjkcdpc/skywalking-webhook.git webhook
 cd webhook
 python3 -m venv venv
