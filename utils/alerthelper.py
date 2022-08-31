@@ -44,10 +44,10 @@ def format_alert_msg(_alert_msg, _skywalking_url):
 告警主题: {}
 告警详情: {}
 触发时间: {}
-告警阈值: -
+告警阈值: {}
 告警发送: [{}]({})
         """.format(
-            id1, scope, name, rule_name, alarm_gessage, start_time, id0, _skywalking_url, _skywalking_url
+            id1, scope, name, rule_name, alarm_gessage, start_time, "-", _skywalking_url, _skywalking_url
         )
         # 判断环境，是有线上环境发布告警
         if "_pro" in name:
