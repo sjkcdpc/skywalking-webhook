@@ -14,6 +14,10 @@ python app.py
 nohup python main.py &
 
 ```
+
+# 参考资料
+- https://www.itmuch.com/skywalking/alert/
+
 # to-do-list
 - ~~企微机器人报警~~
 - 邮件告警
