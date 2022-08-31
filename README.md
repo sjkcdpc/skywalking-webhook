@@ -24,4 +24,5 @@ nohup python main.py &
 - 飞书报警
 
 # 参考资料
+- https://skywalking.apache.org/docs/main/latest/en/setup/backend/backend-alarm/
 - https://www.itmuch.com/skywalking/alert/
