@@ -4,6 +4,7 @@ from WorkWeixinRobot.work_weixin_robot import WWXRobot
 
 alert_msg = b'[{"scopeId":2,"scope":"SERVICE_INSTANCE","name":"bx_regservice_pro-pid:1@regsys-sftnet5g-gsregsyswinservice-deploy-79fc56cf96-lpqz2","id0":31976,"id1":0,"ruleName":"service_instance_resp_time_rule","alarmMessage":"Response time of service instance bx_regservice_pro-pid:1@regsys-sftnet5g-gsregsyswinservice-deploy-79fc56cf96-lpqz2 is more than 1000ms in 2 minutes of last 10 minutes","startTime":1661910198310},{"scopeId":2,"scope":"SERVICE_INSTANCE","name":"bx_studentapi_test-pid:1@studentapi-test-beixiao-private-dev-765fbb6d49-k5d54","id0":26287,"id1":0,"ruleName":"service_instance_resp_time_rule","alarmMessage":"Response time of service instance bx_studentapi_test-pid:1@studentapi-test-beixiao-private-dev-765fbb6d49-k5d54 is more than 1000ms in 2 minutes of last 10 minutes","startTime":1661910198310}]'
 
+alert_msg = b'[{"scopeId":1,"scope":"SERVICE","name":"bx_studentapi_pro","id0":12340,"id1":0,"ruleName":"service_resp_time_percentile_rule","alarmMessage":"Percentile response time of service bx_studentapi_pro alarm in 3 minutes of last 10 minutes, due to more than one condition of p50 \\u003e 1000, p75 \\u003e 1000, p90 \\u003e 1000, p95 \\u003e 1000, p99 \\u003e 1000","startTime":1661922196853},{"scopeId":1,"scope":"SERVICE","name":"bx_gateway_test","id0":42,"id1":0,"ruleName":"service_resp_time_percentile_rule","alarmMessage":"Percentile response time of service bx_gateway_test alarm in 3 minutes of last 10 minutes, due to more than one condition of p50 \\u003e 1000, p75 \\u003e 1000, p90 \\u003e 1000, p95 \\u003e 1000, p99 \\u003e 1000","startTime":1661922196853},{"scopeId":1,"scope":"SERVICE","name":"bx_crm_test","id0":38,"id1":0,"ruleName":"service_resp_time_percentile_rule","alarmMessage":"Percentile response time of service bx_crm_test alarm in 3 minutes of last 10 minutes, due to more than one condition of p50 \\u003e 1000, p75 \\u003e 1000, p90 \\u003e 1000, p95 \\u003e 1000, p99 \\u003e 1000","startTime":1661922196853},{"scopeId":1,"scope":"SERVICE","name":"bx_crm_pro","id0":423,"id1":0,"ruleName":"service_resp_time_percentile_rule","alarmMessage":"Percentile response time of service bx_crm_pro alarm in 3 minutes of last 10 minutes, due to more than one condition of p50 \\u003e 1000, p75 \\u003e 1000, p90 \\u003e 1000, p95 \\u003e 1000, p99 \\u003e 1000","startTime":1661922196853},{"scopeId":1,"scope":"SERVICE","name":"bx_regapi_test","id0":37,"id1":0,"ruleName":"service_resp_time_percentile_rule","alarmMessage":"Percentile response time of service bx_regapi_test alarm in 3 minutes of last 10 minutes, due to more than one condition of p50 \\u003e 1000, p75 \\u003e 1000, p90 \\u003e 1000, p95 \\u003e 1000, p99 \\u003e 1000","startTime":1661922196853}]'
 WX_ROBOT_KEY = "79041d52-5d1c-4415-89d6-4475fd7fe805"
 
 
@@ -49,7 +50,7 @@ def format_alert_msg(_alert_msg, _skywalking_url):
             id1, scope, name, rule_name, alarm_gessage, start_time, id0, _skywalking_url, _skywalking_url
         )
         # 判断环境，是有线上环境发布告警
-        if "_pro-" in name:
+        if "_pro" in name:
             send_info.append(info)
             # print(info)
     return send_info
