@@ -14,6 +14,9 @@ python app.py
 nohup python main.py &
 ```
 
+# 指标介绍
+- P50表示取值周期内有50%的响应都大于1000ms
+
 # to-do-list
 - ~~企微机器人报警~~
 - 邮件告警
