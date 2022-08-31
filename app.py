@@ -16,7 +16,8 @@ def web_hook_rec():
     data = request.get_data()
     current_app.logger.info(data)
     send_info = format_alert_msg(data, config.skywalking_url)
-    send_msg(config.wx_robot_key, send_info)
+    if len(send_info) > 0:
+        send_msg(config.wx_robot_key, send_info)
     return jsonify('200')
 
 
