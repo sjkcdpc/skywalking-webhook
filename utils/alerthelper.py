@@ -30,7 +30,7 @@ def format_alert_msg(_alert_msg, _skywalking_url):
         start_time = instance.get('startTime')
 
         info = """
-告警级别: P1
+告警级别: P{}
 告警类型: {}
 故障主机: {}
 告警主题: {}
@@ -39,7 +39,7 @@ def format_alert_msg(_alert_msg, _skywalking_url):
 告警阈值: {}
 告警发送: [{}]({})
         """.format(
-            scope, name, rule_name, alarm_gessage, start_time, id0, id1, _skywalking_url, _skywalking_url
+            id1, scope, name, rule_name, alarm_gessage, start_time, id0, _skywalking_url, _skywalking_url
         )
         # 判断环境，是有线上环境发布告警
         if "_pro-" in name:
