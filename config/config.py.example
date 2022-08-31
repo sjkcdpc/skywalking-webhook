@@ -1,0 +1,5 @@
+# 企微消息通知bot
+_wx_robot_key = "79041d52-5d1c-4415-89d6-4475fd7fe801"
+
+# SkyWalking地址
+skywalking_url = "http://47.94.231.100:8080/"
