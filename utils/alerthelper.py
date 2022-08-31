@@ -25,7 +25,7 @@ alert_type_dict = {
 
 def format_alert_msg(_alert_msg, _skywalking_url):
     send_info = []
-    instance_list = json.loads(alert_msg.decode('utf-8'))
+    instance_list = json.loads(_alert_msg.decode('utf-8'))
     for instance in instance_list:
         scope_id = instance.get('scopeId')
         scope = alert_type_dict.get(instance.get('scope'), )
