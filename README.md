@@ -12,14 +12,13 @@ pip install -r requirements/requirement.txt
 export FLASK_ENV=development
 python app.py
 nohup python main.py &
-
 ```
-
-# 参考资料
-- https://www.itmuch.com/skywalking/alert/
 
 # to-do-list
 - ~~企微机器人报警~~
 - 邮件告警
 - 钉钉报警
 - 飞书报警
+
+# 参考资料
+- https://www.itmuch.com/skywalking/alert/
