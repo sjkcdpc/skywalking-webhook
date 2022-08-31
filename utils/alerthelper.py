@@ -49,7 +49,7 @@ def format_alert_msg(_alert_msg, _skywalking_url):
             id1, scope, name, rule_name, alarm_gessage, start_time, _skywalking_url, _skywalking_url
         )
         # 判断环境，是有线上环境发布告警
-        if "_pro" in name:
+        if "_dev" not in name and "_test" not in name:
             send_info.append(info)
             # print(info)
     return send_info
