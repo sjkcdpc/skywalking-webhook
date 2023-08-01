@@ -16,7 +16,8 @@ nohup python main.py &
 
 # 指标介绍
 - P50表示取值周期内有50%的响应都大于1000ms
-
+# 报警介绍
+![image](WechatIMG624.jpg)
 # to-do-list
 - ~~企微机器人报警~~
 - 邮件告警
